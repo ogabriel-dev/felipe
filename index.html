@@ -3,15 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#F5EDDB" />
     <title>Rabo de Galo | Cachaça Artesanal</title>
     <meta
       name="description"
-      content="Rabo de Galo: cachaça artesanal feita daqui, com sabores de mel, cacau com pimenta e maracujá. Pequena na garrafa, grande nas histórias."
+      content="Rabo de Galo: cachaça artesanal feita daqui, com sabores de mel, cacau com pimenta e maracujá."
     />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+    </style>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Lato:wght@300;400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap"
       rel="stylesheet"
     />
     <!-- Foto do hero: carrega cedo, na versão certa para cada tela -->
@@ -19,14 +23,6 @@
       rel="preload"
       as="image"
       href="assets/images/image1.jpeg"
-      media="(max-width: 719px)"
-      fetchpriority="high"
-    />
-    <link
-      rel="preload"
-      as="image"
-      href="assets/images/image1.jpeg"
-      media="(min-width: 720px)"
       fetchpriority="high"
     />
     <link rel="stylesheet" href="css/style.css" />
@@ -41,12 +37,50 @@
             fill="currentColor"
           />
         </symbol>
+        <symbol id="instagram" viewBox="0 0 24 24">
+          <rect
+            x="3"
+            y="3"
+            width="18"
+            height="18"
+            rx="5"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+          />
+          <circle
+            cx="12"
+            cy="12"
+            r="4.2"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+          />
+          <circle cx="17.3" cy="6.7" r="1.2" fill="currentColor" />
+        </symbol>
+        <symbol id="feather" viewBox="0 0 24 64">
+          <path
+            d="M12 1C21 14 22 40 12 63C2 40 3 14 12 1Z"
+            fill="currentColor"
+          />
+          <path
+            d="M12 10V62M12 22l6-5M12 30l7-6M12 38l6-6M12 22l-6-5M12 30l-7-6M12 38l-6-6"
+            fill="none"
+            style="stroke: var(--ink)"
+            stroke-width="0.9"
+            stroke-linecap="round"
+            opacity="0.45"
+          />
+        </symbol>
       </defs>
     </svg>
 
     <header class="site-header">
       <nav class="nav" aria-label="Principal">
-        <a href="#inicio" class="nav-brand"
+        <a
+          href="#inicio"
+          class="nav-brand"
+          aria-label="Rabo de Galo, ir para o início"
           ><img src="assets/images/logo-mini.png" alt=""
         /></a>
         <button class="burger" aria-label="Abrir menu" aria-expanded="false">
@@ -59,6 +93,17 @@
           <li><a href="#nos">Os 7 Nós</a></li>
           <li><a href="#daqui">Feita Daqui</a></li>
           <li><a href="#contato">Contato</a></li>
+          <li class="menu-ig">
+            <a
+              href="https://www.instagram.com/rabodegalo_oficial/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram da Rabo de Galo (abre em nova aba)"
+              ><svg aria-hidden="true" width="20" height="20">
+                <use href="#instagram" /></svg
+              ><span>Instagram</span></a
+            >
+          </li>
         </ul>
       </nav>
     </header>
@@ -94,8 +139,8 @@
       </section>
 
       <section id="historia" class="section">
-        <div class="wrap narrow">
-          <header class="sec-head reveal">
+        <div class="wrap story">
+          <header class="sec-head story-head reveal">
             <span class="kicker">Rabo de Galo</span>
             <h2>A história por trás da Rabo de Galo</h2>
             <div class="divider">
@@ -103,111 +148,121 @@
             </div>
           </header>
 
-          <article class="chapter reveal">
-            <span class="num">I</span>
-            <h3>Uma história que começou antes da primeira garrafa</h3>
-            <p>
-              Toda história tem um começo. A da Rabo de Galo começou muito antes
-              da primeira garrafa.
-            </p>
-            <p>
-              Muito tempo atrás, um tio meu fazia cachaça artesanal. Eu nunca
-              cheguei a conhecer seu alambique, nem acompanhei de perto como ele
-              produzia suas bebidas. O que ficou para mim foram as histórias.
-            </p>
-            <p>
-              Histórias de cachaça, de produção artesanal e de um jeito de fazer
-              as coisas que eu só conhecia pelas palavras de quem tinha vivido
-              aquilo.
-            </p>
-            <p>
-              Ele acabou desaparecendo pelo mundo, mas as histórias ficaram.
-            </p>
-          </article>
+          <div class="story-body">
+            <article class="chapter reveal">
+              <span class="num">I</span>
+              <h3>Uma história que começou antes da primeira garrafa</h3>
+              <p>
+                Toda história tem um começo. A da Rabo de Galo começou muito
+                antes da primeira garrafa.
+              </p>
+              <p>
+                Muito tempo atrás, um tio meu fazia cachaça artesanal. Eu nunca
+                cheguei a conhecer seu alambique, nem acompanhei de perto como
+                ele produzia suas bebidas. O que ficou para mim foram as
+                histórias.
+              </p>
+              <p>
+                Histórias de cachaça, de produção artesanal e de um jeito de
+                fazer as coisas que eu só conhecia pelas palavras de quem tinha
+                vivido aquilo.
+              </p>
+              <p>
+                Ele acabou desaparecendo pelo mundo, mas as histórias ficaram.
+              </p>
+            </article>
 
-          <article class="chapter reveal">
-            <span class="num">II</span>
-            <h3>Uma receita que atravessou o tempo</h3>
-            <p>
-              Anos depois, talvez sem perceber, comecei a fazer aquilo que
-              tantas vezes tinha ouvido falar.
-            </p>
-            <p>
-              A primeira receita nasceu quase por acaso. Eu simplesmente tive
-              vontade de fazer alguma coisa diferente. Foi assim que surgiu a
-              cachaça de mel. E, com o tempo, ela passou a carregar também uma
-              parte daquela história antiga. Gosto de pensar nela como uma
-              receita que atravessou o tempo, mesmo que eu nunca tenha aprendido
-              diretamente com meu tio.
-            </p>
-          </article>
+            <article class="chapter reveal">
+              <span class="num">II</span>
+              <h3>Uma receita que atravessou o tempo</h3>
+              <p>
+                Anos depois, talvez sem perceber, comecei a fazer aquilo que
+                tantas vezes tinha ouvido falar.
+              </p>
+              <p>
+                A primeira receita nasceu quase por acaso. Eu simplesmente tive
+                vontade de fazer alguma coisa diferente. Foi assim que surgiu a
+                cachaça de mel. E, com o tempo, ela passou a carregar também uma
+                parte daquela história antiga. Gosto de pensar nela como uma
+                receita que atravessou o tempo, mesmo que eu nunca tenha
+                aprendido diretamente com meu tio.
+              </p>
+            </article>
 
-          <article class="chapter reveal">
-            <span class="num">III</span>
-            <h3>Uma lembrança da adolescência</h3>
-            <p>Depois veio o cacau com pimenta.</p>
-            <p>
-              Eu tentava recriar uma bebida que havia experimentado quando era
-              adolescente. Não tinha uma receita para seguir, apenas a lembrança
-              do sabor. Fui tentando, ajustando e experimentando até chegar a
-              uma combinação que funcionou.
-            </p>
-            <p>
-              E talvez seja por isso que essa seja uma das receitas mais
-              pessoais da Rabo de Galo.
-            </p>
-            <p>
-              Quando tomo essa cachaça, não sinto apenas o sabor do cacau e da
-              pimenta. Sinto um pouco da minha adolescência.
-            </p>
-          </article>
+            <article class="chapter reveal">
+              <span class="num">III</span>
+              <h3>Uma lembrança da adolescência</h3>
+              <p>Depois veio o cacau com pimenta.</p>
+              <p>
+                Eu tentava recriar uma bebida que havia experimentado quando era
+                adolescente. Não tinha uma receita para seguir, apenas a
+                lembrança do sabor. Fui tentando, ajustando e experimentando até
+                chegar a uma combinação que funcionou.
+              </p>
+              <p>
+                E talvez seja por isso que essa seja uma das receitas mais
+                pessoais da Rabo de Galo.
+              </p>
+              <p>
+                Quando tomo essa cachaça, não sinto apenas o sabor do cacau e da
+                pimenta. Sinto um pouco da minha adolescência.
+              </p>
+            </article>
 
-          <article class="chapter reveal">
-            <span class="num">IV</span>
-            <h3>Um desafio vindo de Minas Gerais</h3>
-            <p>O maracujá veio de outra história.</p>
-            <p>
-              Uma amiga havia experimentado uma bebida em uma adega em Minas
-              Gerais e me pediu para tentar fazer algo parecido. Eu aceitei o
-              desafio. Experimentei, ajustei e cheguei à minha própria versão.
-            </p>
-          </article>
+            <article class="chapter reveal">
+              <span class="num">IV</span>
+              <h3>Um desafio vindo de Minas Gerais</h3>
+              <p>O maracujá veio de outra história.</p>
+              <p>
+                Uma amiga havia experimentado uma bebida em uma adega em Minas
+                Gerais e me pediu para tentar fazer algo parecido. Eu aceitei o
+                desafio. Experimentei, ajustei e cheguei à minha própria versão.
+              </p>
+            </article>
 
-          <article class="chapter reveal">
-            <span class="num">V</span>
-            <h3>Três sabores. Três histórias.</h3>
-            <p>Três sabores. Três histórias diferentes.</p>
-            <p class="pull">
-              Mas todos nasceram do mesmo lugar: da vontade de experimentar.
-            </p>
-          </article>
+            <article class="chapter reveal">
+              <span class="num">V</span>
+              <h3>Três sabores. Três histórias.</h3>
+              <p>Três sabores. Três histórias diferentes.</p>
+              <p class="pull">
+                Mas todos nasceram do mesmo lugar: da vontade de experimentar.
+              </p>
+            </article>
+          </div>
         </div>
       </section>
 
       <section id="nome" class="section dark">
-        <div class="wrap narrow center reveal">
-          <span class="kicker">O galo</span>
-          <h2>De onde vem o nome?</h2>
-          <div class="divider">
-            <svg><use href="#leaf" /></svg>
+        <svg class="name-feather" aria-hidden="true">
+          <use href="#feather" />
+        </svg>
+        <div class="wrap name-grid">
+          <header class="name-head reveal">
+            <span class="kicker">O galo</span>
+            <h2>De onde vem o nome?</h2>
+            <div class="divider">
+              <svg><use href="#leaf" /></svg>
+            </div>
+            <p class="lead">Rabo de Galo nasceu de uma brincadeira.</p>
+          </header>
+          <div class="name-body reveal">
+            <p>Existe uma velha piada do interior:</p>
+            <blockquote>“Quem tem pena do rabo não vira viado.”</blockquote>
+            <p>A graça está justamente no duplo sentido da palavra “pena”.</p>
+            <p>
+              Pena pode ser aquilo que nasce do corpo de um galo. Mas também
+              pode ser sentir dó, compaixão.
+            </p>
+            <p>
+              A Rabo de Galo nasceu desse jogo de palavras, entre a pena que
+              está no rabo do galo e a “pena” de ter dó.
+            </p>
+            <p>
+              É uma brincadeira simples, dessas que passam de boca em boca e
+              fazem parte da linguagem do interior.
+            </p>
+            <p class="pull">E o galo acabou virando o símbolo da marca.</p>
           </div>
-          <p class="lead">Rabo de Galo nasceu de uma brincadeira.</p>
-          <p>Existe uma velha piada do interior:</p>
-          <blockquote>“Quem tem pena do rabo não vira viado.”</blockquote>
-          <p>A graça está justamente no duplo sentido da palavra “pena”.</p>
-          <p>
-            Pena pode ser aquilo que nasce do corpo de um galo. Mas também pode
-            ser sentir dó, compaixão.
-          </p>
-          <p>
-            A Rabo de Galo nasceu desse jogo de palavras, entre a pena que está
-            no rabo do galo e a “pena” de ter dó.
-          </p>
-          <p>
-            É uma brincadeira simples, dessas que passam de boca em boca e fazem
-            parte da linguagem do interior.
-          </p>
-          <p class="pull">E o galo acabou virando o símbolo da marca.</p>
         </div>
       </section>
 
@@ -351,28 +406,30 @@
       </section>
 
       <section id="daqui" class="section green">
-        <div class="wrap narrow center reveal">
+        <div class="wrap daqui-grid reveal">
           <h2 class="sr">Feita daqui.</h2>
           <p class="daqui-big" aria-hidden="true">
             Feita<br /><strong>DAQUI</strong>
           </p>
-          <p>
-            Existe ainda uma característica que acompanha a Rabo de Galo desde o
-            começo:
-          </p>
-          <p class="lead">
-            os materiais e insumos utilizados são do município.
-          </p>
-          <p>
-            Do mel à garrafa, a ideia é manter a produção ligada ao lugar onde a
-            marca nasceu.
-          </p>
-          <p>A Rabo de Galo não nasceu em uma grande indústria distante.</p>
-          <p class="pull">Nasceu aqui.</p>
-          <p>
-            Com ingredientes daqui, materiais daqui, histórias daqui e pessoas
-            daqui.
-          </p>
+          <div class="daqui-copy">
+            <p>
+              Existe ainda uma característica que acompanha a Rabo de Galo desde
+              o começo:
+            </p>
+            <p class="lead">
+              os materiais e insumos utilizados são do município.
+            </p>
+            <p>
+              Do mel à garrafa, a ideia é manter a produção ligada ao lugar onde
+              a marca nasceu.
+            </p>
+            <p>A Rabo de Galo não nasceu em uma grande indústria distante.</p>
+            <p class="pull">Nasceu aqui.</p>
+            <p>
+              Com ingredientes daqui, materiais daqui, histórias daqui e pessoas
+              daqui.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -393,7 +450,6 @@
           <p>E algumas garrafas amarradas com sete nós.</p>
           <p class="brand-end">RABO DE GALO</p>
           <p class="sub-end">Cachaça Artesanal</p>
-          <p class="slogan">Pequena na garrafa. Grande nas histórias.</p>
         </div>
       </section>
 
@@ -406,13 +462,24 @@
           <p>
             Quer conhecer melhor a Rabo de Galo ou falar sobre nossos produtos?
           </p>
-          <a
-            class="btn btn-gold btn-big"
-            href="https://wa.me/5515998523931"
-            target="_blank"
-            rel="noopener"
-            >Falar pelo WhatsApp</a
-          >
+          <div class="actions">
+            <a
+              class="btn btn-gold btn-big"
+              href="https://wa.me/5515998523931"
+              target="_blank"
+              rel="noopener"
+              >Falar pelo WhatsApp</a
+            >
+            <a
+              class="btn btn-ig btn-big"
+              href="https://www.instagram.com/rabodegalo_oficial/"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><svg aria-hidden="true" width="20" height="20">
+                <use href="#instagram" /></svg
+              >Siga-nos no Instagram</a
+            >
+          </div>
           <p class="phone">WhatsApp<br /><strong>(15) 99852-3931</strong></p>
           <p class="note">Consuma com responsabilidade.</p>
         </div>
@@ -425,8 +492,17 @@
           <p class="f-brand">
             RABO DE GALO<br /><small>CACHAÇA ARTESANAL</small>
           </p>
-          <p class="f-slogan">Pequena na garrafa. Grande nas histórias.</p>
           <p>WhatsApp:<br />(15) 99852-3931</p>
+          <p class="f-ig">
+            <a
+              href="https://www.instagram.com/rabodegalo_oficial/"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><svg aria-hidden="true" width="20" height="20">
+                <use href="#instagram" /></svg
+              ><span>@rabodegalo_oficial</span></a
+            >
+          </p>
         </div>
         <ul>
           <li><a href="#inicio">Início</a></li>
