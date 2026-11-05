@@ -1,4 +1,3 @@
-// Menu mobile
 const burger = document.querySelector(".burger");
 const menu = document.querySelector(".menu");
 const closeMenu = () => {
@@ -13,7 +12,6 @@ menu
   .querySelectorAll("a")
   .forEach((a) => a.addEventListener("click", closeMenu));
 
-// Sombra do header ao rolar
 const header = document.querySelector(".site-header");
 addEventListener(
   "scroll",
@@ -21,7 +19,6 @@ addEventListener(
   { passive: true },
 );
 
-// Fade-in ao entrar na tela
 const items = document.querySelectorAll(".reveal");
 if ("IntersectionObserver" in window) {
   const io = new IntersectionObserver(
